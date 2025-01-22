@@ -23,8 +23,6 @@ jobs:
         run: |
           sudo apt-get update -y
           sudo apt-get install -y --no-install-recommends \
-            gconf-service \
-            libasound2 \
             libatk1.0-0 \
             libcairo2 \
             libcups2 \
@@ -32,7 +30,6 @@ jobs:
             libexpat1 \
             libfontconfig1 \
             libgbm1 \
-            libgconf-2-4 \
             libgdk-pixbuf2.0-0 \
             libglib2.0-0 \
             libgtk-3-0 \
@@ -59,8 +56,7 @@ jobs:
             lsb-release \
             xdg-utils \
             wget \
-            chromium \
-            chromium-sandbox
+            chromium-browser
           sudo apt-get clean
           sudo rm -rf /var/lib/apt/lists/*
 
