@@ -89,8 +89,13 @@ jobs:
         working-directory: ./pa11y
         run: |
           npm ci
-          npm run test
+          DEBUG=pa11y* npm run test
           
+       # Copy Pa11y report to app's public directory
+      - name: Copy Pa11y report
+        run: |
+          cp ./pa11y/report.json ./app/dist/reports/
+
       # Build Vue app
       - name: Install and build Vue app
         working-directory: ./app
@@ -98,12 +103,7 @@ jobs:
           npm ci
           npm run build
           
-      # Copy Pa11y report to app's public directory
-      - name: Copy Pa11y report
-        run: |
-          mkdir -p ./app/dist/reports
-          cp ./pa11y/report.json ./app/dist/reports/
-
+     
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
