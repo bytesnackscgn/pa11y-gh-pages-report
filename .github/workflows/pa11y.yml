@@ -1,7 +1,7 @@
 name: Pa11y CI Accessibility Tests
 on:
-  schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight
+  #schedule:
+  #  - cron: '0 0 * * *'  # Runs daily at midnight
   workflow_dispatch:  # Allows manual trigger
   push:
     branches:
@@ -56,15 +56,15 @@ jobs:
             lsb-release \
             xdg-utils \
             wget \
-            chromium-browser
+            
           sudo apt-get clean
           sudo rm -rf /var/lib/apt/lists/*
 
       # Set Puppeteer environment variables
-      - name: Set Puppeteer env
-        run: |
-          echo "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true" >> $GITHUB_ENV
-          echo "PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium" >> $GITHUB_ENV
+      #- name: Set Puppeteer env
+       # run: |
+         # echo "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true" >> $GITHUB_ENV
+         # echo "PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium" >> $GITHUB_ENV
 
       # Cache pa11y dependencies
       - name: Cache Pa11y dependencies
