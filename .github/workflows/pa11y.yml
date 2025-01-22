@@ -62,15 +62,13 @@ jobs:
             lsb-release \
             xdg-utils \
             wget
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo dpkg -i google-chrome-stable_current_amd64.deb
           sudo rm -rf /var/lib/apt/lists/*
 
       # Set Puppeteer environment variables
-      - name: Set Puppeteer env
-        run: |
-          echo "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true" >> $GITHUB_ENV
-          echo "PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable" >> $GITHUB_ENV
+      #- name: Set Puppeteer env
+      #  run: |
+     #     echo "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true" >> $GITHUB_ENV
+     #     echo "PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable" >> $GITHUB_ENV
 
       # Cache pa11y dependencies
       - name: Cache Pa11y dependencies
@@ -95,6 +93,7 @@ jobs:
         working-directory: ./pa11y
         run: |
           npm ci
+          npm install puppeteer
           npm run test
           
        # Copy Pa11y report to app's public directory
