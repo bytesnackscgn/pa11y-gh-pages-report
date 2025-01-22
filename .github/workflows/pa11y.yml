@@ -98,7 +98,7 @@ jobs:
               run: |
                   npm ci
                   echo "RUNNING THE PA11Y TEST"
-                  npm run test
+                  DEBUG=pa11y*,puppeteer* NODE_DEBUG=* npm run test -- --debug
 
               # Copy Pa11y report to app's public directory
             - name: Copy Pa11y report
