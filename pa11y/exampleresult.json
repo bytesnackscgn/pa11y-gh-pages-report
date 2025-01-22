@@ -1,0 +1,32 @@
+{
+	"results": {
+		"https://markenundregale.de/de": {
+			"documentTitle": "Marken & Regale | Test, Test, Uhren, Brillen, Jacken und Accessoires | Marken & Regale",
+			"pageUrl": "https://markenundregale.de/de",
+			"issues": [
+				{
+					"code": "WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputText.Name",
+					"type": "error",
+					"typeCode": 1,
+					"message": "This textinput element does not have a name available to an accessibility API. Valid names are: label element, title undefined, aria-label undefined, aria-labelledby undefined.",
+					"context": "<input id=\"search\" value=\"\" autocomplete=\"off\" data-test-id=\"search-input\" class=\"copy-small px-4 py-2 pr-10 w-full transform-gpu ring-0 transition-colors duration-200 placeholder:text-kns-primary-default hover:placeholder:text-kns-primary-60 focus:o...",
+					"selector": "#search",
+					"runner": "htmlcs",
+					"runnerExtras": {}
+				},
+				{
+					"code": "WCAG2AA.Principle1.Guideline1_3.1_3_1.F68",
+					"type": "error",
+					"typeCode": 1,
+					"message": "This form field should be labelled in some way. Use the label element (either with a \"for\" attribute or wrapped around the form field), or \"title\", \"aria-label\" or \"aria-labelledby\" attributes as appropriate.",
+					"context": "<input id=\"search\" value=\"\" autocomplete=\"off\" data-test-id=\"search-input\" class=\"copy-small px-4 py-2 pr-10 w-full transform-gpu ring-0 transition-colors duration-200 placeholder:text-kns-primary-default hover:placeholder:text-kns-primary-60 focus:o...",
+					"selector": "#search",
+					"runner": "htmlcs",
+					"runnerExtras": {}
+				}
+			]
+		}
+	},
+	"errors": [],
+	"violations": 71
+}

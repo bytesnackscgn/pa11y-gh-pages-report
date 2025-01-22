@@ -1,0 +1,11 @@
+{
+  "name": "accessibility-report",
+  "version": "1.0.0",
+  "description": "Accessibility testing with Pa11y CI",
+  "scripts": {
+    "test": "pa11y-ci -c ./pa11y-config.json"
+  },
+  "dependencies": {
+    "pa11y-ci": "^3.0.1"
+  }
+}

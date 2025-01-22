@@ -1,0 +1,23 @@
+{
+	"defaults": {
+		"reporters": [
+			[
+				"./reporter.js",
+				{
+					"fileName": "./report.json"
+				}
+			]
+		],
+		"timeout": 10000,
+		"wait": 1000,
+		"chromeLaunchConfig": {
+			"args": [
+				"--no-sandbox"
+			]
+		}
+	},
+	"urls": [
+		"https://kapten-son.com/",
+		"https://kapten-son.com/de/rucksaecke"
+	]
+}
