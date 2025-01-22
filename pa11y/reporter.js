@@ -6,6 +6,8 @@ const path = require("path");
 const appReportsPath = '../app/src/reports/';
 
 module.exports = function (options) {
+	console.log('STARTING REPORTER');
+	
     // initialize an empty report data
     const customReport = {
         results: {},
